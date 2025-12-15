@@ -1,0 +1,15 @@
+---
+// src/pages/murals.astro
+import Layout from '../layouts/Layout.astro';
+import ArtworkGallery from '../components/ArtworkGallery.astro';
+import { ALL_ARTWORK } from '../data/artwork.js';
+
+// 1. Filter the entire list to only include 'mural' type
+const murals = ALL_ARTWORK.filter(item => item.type === 'mural');
+---
+
+<Layout title="Murals Portfolio">
+    <h1 class="display-4 mb-4 text-primary">Murals & Large-Scale Work</h1>
+    
+    <ArtworkGallery artworkItems={murals} />
+</Layout>

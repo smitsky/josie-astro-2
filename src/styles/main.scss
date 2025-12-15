@@ -1,0 +1,9 @@
+// src/styles/main.scss
+
+// 1. CUSTOMIZE VARIABLES (Optional, place custom variables here)
+// Example: Change primary color
+$primary: #4e79a7; 
+
+// 2. Import the entire Bootstrap package. 
+// This file handles the correct internal order of functions, variables, and components.
+@import "bootstrap/scss/bootstrap";

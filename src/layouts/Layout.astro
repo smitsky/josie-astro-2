@@ -1,0 +1,44 @@
+---
+// 1. Astro Frontmatter: Import components and scripts
+
+// The Navigation component we just created
+import Navigation from '../components/Navigation.astro'; 
+
+// Props definition: The title changes per page, but the rest of the layout is static.
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+// IMPORTANT: Your custom main.scss file must be imported here 
+// to ensure Bootstrap styles are applied globally.
+import '../styles/main.scss'; 
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <title>{title} | Artist Portfolio</title>
+</head>
+<body>
+    <Navigation />
+
+    <main class="container my-5">
+        <slot />
+    </main>
+
+    <footer class="bg-light text-center py-3 mt-auto">
+        <div class="container">
+            <p class="mb-0">© {new Date().getFullYear()} Josie Gonzalez. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+      import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+    </script>
+</body>
+</html>

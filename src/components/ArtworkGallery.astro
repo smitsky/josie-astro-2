@@ -1,0 +1,27 @@
+---
+// src/components/ArtworkGallery.astro
+import ArtworkCard from './ArtworkCard.astro';
+
+// Define the component prop: it now expects an array of artwork items
+export interface Props {
+    artworkItems: typeof import('../data/artwork.js').ALL_ARTWORK;
+}
+
+const { artworkItems } = Astro.props;
+---
+
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {artworkItems.map(item => (
+        <div class="col">
+            <ArtworkCard
+                title={item.title}
+                description={item.description}
+                imageUrl={item.imageUrl}
+                linkUrl={item.linkUrl}
+            />
+        </div>
+    ))}
+    {artworkItems.length === 0 && (
+        <p class="text-muted col-12">No artwork found in this category yet.</p>
+    )}
+</div>

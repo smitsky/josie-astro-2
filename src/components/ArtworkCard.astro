@@ -1,0 +1,30 @@
+---
+// src/components/ArtworkCard.astro
+export interface Props {
+    title: string;
+    description: string;
+    imageUrl: string;
+    linkUrl: string; // Link to a detail page if needed
+}
+
+const { title, description, imageUrl, linkUrl } = Astro.props;
+---
+
+<div class="card h-100 border-0 shadow-sm">
+    <a href={linkUrl} aria-label={`View details for ${title}`}>
+        <img src={imageUrl} class="card-img-top img-fluid" alt={title} loading="lazy" />
+    </a>
+    <div class="card-body">
+        <h5 class="card-title text-primary">{title}</h5>
+        <p class="card-text text-muted">{description}</p>
+        <a href={linkUrl} class="btn btn-sm btn-outline-primary mt-2">View Work</a>
+    </div>
+</div>
+
+<style>
+    /* Optional: Ensure consistent image height or aspect ratio if needed */
+    .card-img-top {
+        object-fit: cover; 
+        height: 250px; /* Adjust as needed */
+    }
+</style>

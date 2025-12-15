@@ -1,0 +1,15 @@
+---
+// src/pages/paintings.astro
+import Layout from '../layouts/Layout.astro';
+import ArtworkGallery from '../components/ArtworkGallery.astro';
+import { ALL_ARTWORK } from '../data/artwork.js';
+
+// 1. Filter the entire list to only include 'painting' type
+const paintings = ALL_ARTWORK.filter(item => item.type === 'painting');
+---
+
+<Layout title="Paintings Portfolio">
+    <h1 class="display-4 mb-4 text-primary">Paintings Collection</h1>
+    
+    <ArtworkGallery artworkItems={paintings} />
+</Layout>
