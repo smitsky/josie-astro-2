@@ -67,6 +67,14 @@ export const ALL_ARTWORK = [
         imageUrl: '/murals/rise-up1.jpeg', 
         linkUrl: '/murals/rise-up1.jpeg'
     },
+    { 
+        id: 'm001', 
+        type: 'mural', // <-- CRITICAL: Use this for filtering
+        title: '', 
+        description: '', 
+        imageUrl: '/murals/rise-up2.jpeg', 
+        linkUrl: '/murals/rise-up2.jpeg'
+    },
     // PUBLIC ART
     { 
         id: 'pa001', 
