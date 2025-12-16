@@ -72,8 +72,8 @@ export const ALL_ARTWORK = [
         type: 'mural', // <-- CRITICAL: Use this for filtering
         title: '', 
         description: '', 
-        imageUrl: '/murals/rise-up2.jpeg', 
-        linkUrl: '/murals/rise-up2.jpeg'
+        imageUrl: '/murals/rise-up2.png', 
+        linkUrl: '/murals/rise-up2.png'
     },
     // PUBLIC ART
     { 
