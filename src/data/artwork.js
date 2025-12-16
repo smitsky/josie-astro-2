@@ -73,8 +73,8 @@ export const ALL_ARTWORK = [
         type: 'public-art', // <-- CRITICAL: Use this for filtering
         title: '', 
         description: '', 
-        imageUrl: '/public-art-/children-at-play2.jpg', 
-        linkUrl: '/public-art-/children-at-play2.jpg' 
+        imageUrl: '/public-art-/children-at-play2.jpeg', 
+        linkUrl: '/public-art-/children-at-play2.jpeg' 
     },
     // ... add all your other artwork here
 ];
