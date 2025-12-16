@@ -65,8 +65,8 @@ export const ALL_ARTWORK = [
         type: 'public-art', // <-- CRITICAL: Use this for filtering
         title: 'The Steel Garden', 
         description: 'Public metal installation, 2023.', 
-        imageUrl: '/public-art/steel-garden.jpg', 
-        linkUrl: '/public-art/steel-garden' 
+        imageUrl: '/public-art/children-at-play1.webp', 
+        linkUrl: '/public-art/children-at-play1.webp' 
     },
     // ... add all your other artwork here
 ];
