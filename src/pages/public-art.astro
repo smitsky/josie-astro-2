@@ -6,11 +6,11 @@ import ArtworkGallery from '../components/ArtworkGallery.astro';
 import { ALL_ARTWORK } from '../data/artwork.js';
 
 // 1. Filter the entire list to only include 'public-art' type
-const public-art = ALL_ARTWORK.filter(item => item.type === 'public-art');
+const publicArt = ALL_ARTWORK.filter(item => item.type === 'public-art');
 ---
 
 <Layout title="Public Art Portfolio">
     <h1 class="display-4 mb-4 text-primary">Public Art Collection</h1>
     
-    <ArtworkGallery artworkItems={public-art} />
+    <ArtworkGallery artworkItems={publicArt} />
 </Layout>
