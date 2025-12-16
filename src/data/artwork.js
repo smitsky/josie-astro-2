@@ -80,7 +80,7 @@ export const ALL_ARTWORK = [
         id: 'pa001', 
         type: 'public-art', // <-- CRITICAL: Use this for filtering
         title: 'Children At Play, 2005', 
-        description: '',
+        description: 'Woodlawn Avenue Train Station Bronx, NY',
         imageUrl: '/public-art-/children-at-play1.jpg', 
         linkUrl: '/public-art-/children-at-play1.jpg' 
     },
