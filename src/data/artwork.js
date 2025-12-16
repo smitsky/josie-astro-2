@@ -64,7 +64,7 @@ export const ALL_ARTWORK = [
         id: 'pa001', 
         type: 'public-art', // <-- CRITICAL: Use this for filtering
         title: 'Children At Play, 2005', 
-        description:'', 
+        description: '', 
         imageUrl: '/public-art-/children-at-play1.jpg', 
         linkUrl: '/public-art-/children-at-play1.jpg' 
     },
