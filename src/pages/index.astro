@@ -1,8 +1,78 @@
 ---
 // src/pages/index.astro
 import Layout from '../layouts/Layout.astro';
+import ArtworkCard from '../components/ArtworkCard.astro'; // <-- We'll use the Card directly for custom layout
+import { ALL_ARTWORK } from '../data/artwork.js';
+
+// Select one key piece from each category for the dynamic layout
+const featuredPainting = ALL_ARTWORK.find(item => item.type === 'painting');
+const featuredMural = ALL_ARTWORK.find(item => item.type === 'mural');
+const featuredPublicArt = ALL_ARTWORK.find(item => item.type === 'public-art');
+
+// Optional: Fallback if a category is missing
+const highlights = [featuredPainting, featuredMural, featuredPublicArt].filter(Boolean);
+
+// If you want one very large piece, select the best one
+const heroPiece = highlights[0]; 
 ---
-<Layout title="Home">
-    <h1 class="display-3">Welcome to the Online Studio</h1>
-    <p class="lead">Here's a Glimpse of My Work</p>
+
+<Layout title="Home | Online Studio">
+    
+    <header class="row justify-content-center py-5 mb-5 text-center bg-light rounded-3 shadow-sm">
+        <div class="col-12 col-lg-8">
+            <h1 class="display-3 fw-bold text-primary mb-3">Welcome to the Online Studio</h1>
+            <p class="lead text-secondary mb-4">
+                Discover the latest collection of contemporary works by [Your Name].
+            </p>
+            <a href="/paintings" class="btn btn-primary btn-lg mt-2 me-2">View Portfolio →</a>
+            <a href="/about" class="btn btn-outline-secondary btn-lg mt-2">Meet the Artist</a>
+        </div>
+    </header>
+
+    <main class="py-4">
+        <h2 class="text-center mb-5">Selected Highlights</h2>
+        
+        {heroPiece && (
+            <div class="row g-4 mb-5">
+                
+                <div class="col-12 col-md-8">
+                    <ArtworkCard
+                        title={heroPiece.title}
+                        description={heroPiece.description}
+                        imageUrl={heroPiece.imageUrl}
+                        linkUrl={heroPiece.linkUrl}
+                    />
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="d-grid gap-4">
+                        {featuredMural && (
+                            <ArtworkCard
+                                title={featuredMural.title}
+                                description={featuredMural.description}
+                                imageUrl={featuredMural.imageUrl}
+                                linkUrl={featuredMural.linkUrl}
+                            />
+                        )}
+                        {featuredPublicArt && (
+                            <ArtworkCard
+                                title={featuredPublicArt.title}
+                                description={featuredPublicArt.description}
+                                imageUrl={featuredPublicArt.imageUrl}
+                                linkUrl={featuredPublicArt.linkUrl}
+                            />
+                        )}
+                    </div>
+                </div>
+
+            </div>
+        )}
+        
+        <div class="text-center bg-light p-5 rounded-3 mt-5">
+            <h3 class="fw-light">Interested in a commissioned piece?</h3>
+            <p class="lead mb-4">I accept a limited number of commissions each year.</p>
+            <a href="/contact" class="btn btn-primary btn-lg">Start a Project</a>
+        </div>
+    </main>
+
 </Layout>
