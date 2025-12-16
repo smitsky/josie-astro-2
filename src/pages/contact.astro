@@ -1,0 +1,49 @@
+---
+// src/pages/contact.astro
+import Layout from '../layouts/Layout.astro';
+// Define a card width helper for small screens (optional)
+const cardWidthClass = "col-lg-8 col-xl-6"; 
+---
+
+<Layout title="Contact the Artist">
+    <div class="row justify-content-center">
+        <div class={cardWidthClass}>
+            <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+                <div class="card-body">
+                    <h1 class="card-title text-center text-primary mb-4">Get In Touch</h1>
+                    <p class="card-text text-center text-muted mb-4">
+                        Please use the form below for commission inquiries, press requests, or general questions.
+                    </p>
+
+                    <form name="contact" method="POST" data-netlify="true" action="/thank-you">
+                        
+                        <div class="mb-3">
+                            <label for="contactName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="contactName" name="name" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="contactEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="contactEmail" name="email" required>
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="contactMessage" class="form-label">Your Message</label>
+                            <textarea class="form-control" id="contactMessage" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="d-grid gap-2 mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <p>Alternatively, you can email me directly at: <a href="mailto:artist@example.com">artist@example.com</a></p>
+            </div>
+        </div>
+    </div>
+</Layout>
