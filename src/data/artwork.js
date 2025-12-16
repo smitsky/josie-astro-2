@@ -59,6 +59,14 @@ export const ALL_ARTWORK = [
         imageUrl: '/murals/learners.webp', 
         linkUrl: '/murals/learners.webp'
     },
+    { 
+        id: 'm001', 
+        type: 'mural', // <-- CRITICAL: Use this for filtering
+        title: 'Rise Up, 2008', 
+        description: 'Large-scale outdoor mural painted in 2008.', 
+        imageUrl: '/murals/rise-up1.jpeg', 
+        linkUrl: '/murals/rise-up1.jpeg''
+    },
     // PUBLIC ART
     { 
         id: 'pa001', 
