@@ -63,10 +63,10 @@ export const ALL_ARTWORK = [
     { 
         id: 'pa001', 
         type: 'public-art', // <-- CRITICAL: Use this for filtering
-        title: 'The Steel Garden', 
-        description: 'Public metal installation, 2023.', 
-        imageUrl: '/public-art/children-at-play1.webp', 
-        linkUrl: '/public-art/children-at-play1.webp' 
+        title: 'Children At Play', 
+        description: '', 
+        imageUrl: '/public-art/children-at-play1.jpg', 
+        linkUrl: '/public-art/children-at-play1.jpg' 
     },
     // ... add all your other artwork here
 ];
