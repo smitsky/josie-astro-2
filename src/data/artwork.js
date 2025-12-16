@@ -18,6 +18,38 @@ export const ALL_ARTWORK = [
         imageUrl: '/paintings/gallo.webp', 
         linkUrl: '/paintings/gallo.webp' 
     },
+    { 
+        id: 'p001', 
+        type: 'painting', // <-- CRITICAL: Use this for filtering
+        title: 'Rise', 
+        description: '', 
+        imageUrl: '/paintings/unnamed-painting1.webp', 
+        linkUrl: '/paintings/unnamed-painting1.webp' 
+    },
+    { 
+        id: 'p001', 
+        type: 'painting', // <-- CRITICAL: Use this for filtering
+        title: 'Boriken Dreams, 2021', 
+        description: '', 
+        imageUrl: '/paintings/unnamed-painting2.webp', 
+        linkUrl: '/paintings/unnamed-painting2.webp' 
+    },
+    { 
+        id: 'p001', 
+        type: 'painting', // <-- CRITICAL: Use this for filtering
+        title: 'Blue Wide Open', 
+        description: '', 
+        imageUrl: '/paintings/unnamed-painting3.webp', 
+        linkUrl: '/paintings/unnamed-painting3.webp' 
+    },
+    { 
+        id: 'p001', 
+        type: 'painting', // <-- CRITICAL: Use this for filtering
+        title: 'Visions, 1996', 
+        description: '', 
+        imageUrl: '/paintings/unnamed-painting4.webp', 
+        linkUrl: '/paintings/unnamed-painting4.webp' 
+    },
     // MURALS
     { 
         id: 'm001', 
@@ -33,7 +65,7 @@ export const ALL_ARTWORK = [
         type: 'public-art', // <-- CRITICAL: Use this for filtering
         title: 'The Steel Garden', 
         description: 'Public metal installation, 2023.', 
-        imageUrl: '/images/public-art/steel-garden.jpg', 
+        imageUrl: '/public-art/steel-garden.jpg', 
         linkUrl: '/public-art/steel-garden' 
     },
     // ... add all your other artwork here
