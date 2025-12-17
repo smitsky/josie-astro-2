@@ -1,0 +1,61 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About the Artist">
+  <div class="container py-5">
+    
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <h1 class="display-4 fw-bold">Meet the Artist</h1>
+        <div class="header-line mx-auto mb-4" style="width: 80px; height: 4px; background-color: var(--bs-primary);"></div>
+      </div>
+    </div>
+
+    <div class="row align-items-center mb-5">
+      <div class="col-lg-6">
+        <h2 class="h3 mb-3">Passion in Every Stroke</h2>
+        <p class="lead">
+          Josie Gonzalez (b. New York, NY) is a Puerto Rican/Borikéña painter, muralist and designer who lives and works in New York City. As a teen, she apprenticed under artist Jorge Soto Sánchez at Taller Boricua/the Puerto Rican Workshop collective in East Harlem, New York and later worked as a muralist with the Cityarts Mural Workshop and the Murals in the Parks program.
+        </p>
+        <p>
+          Gonzalez continued to embrace her interest in building and representing community through her teaching artist practice, and creating artwork by collaborating on numerous community projects and commissions throughout the New York City area, partnering with local organizations, neighborhood groups, schools, libraries, and local businesses. Among her public art commissions is a faceted glass window installation at the Woodlawn Avenue station in the Bronx commissioned by the New York MTA Arts for Transit program; a collaborative design translated into a ceramic tile installation for the NYC Department of Education Sites for Students Program, P.S. 54, Bronx, NY; and an installation for The New York Public Library, Chatham Square Branch, NY.
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <div class="position-relative">
+          <img 
+            src="/josie-painting.jpg" 
+            alt="Artist painting in the studio" 
+            class="img-fluid rounded shadow-lg"
+          />
+          <div class="bg-primary position-absolute bottom-0 start-0 translate-middle-x d-none d-lg-block" style="width: 100px; height: 100px; z-index: -1; opacity: 0.1; border-radius: 50%;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row align-items-center flex-column-reverse flex-lg-row">
+      <div class="col-lg-6">
+        <img 
+          src="/josie-school.webp" 
+          alt="Artist teaching an art class" 
+          class="img-fluid rounded shadow-lg"
+        />
+      </div>
+      <div class="col-lg-6 ps-lg-5 mt-4 mt-lg-0">
+        <h2 class="h3 mb-3">Sharing the Craft</h2>
+        <p>
+          In addition to her commitment to public art and community building, Gonzalez has worked with The Metropolitan Museum of Art, Bronx Children's Museum, the New-York Historical and El Museo del Barrio creating community art education programs. Her work has been featured in Employee Art Shows at The Metropolitan Museum of Art and the New-York Historical.
+        </p>
+        <p>
+          Beyond the studio, [Artist Name] believes that art is a universal language meant to be shared. Whether through large-scale murals or intimate classroom sessions, the goal remains the same: to inspire others to see the world through a more colorful lens.
+        </p>
+        
+        <div class="mt-4">
+            <a href="/contact" class="btn btn-outline-primary">Inquire About Workshops</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</Layout>
